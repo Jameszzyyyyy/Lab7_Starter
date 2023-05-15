@@ -45,7 +45,7 @@ function initializeServiceWorker() {
   // We first must register our ServiceWorker here before any of the code in
   // sw.js is executed.
   // B1. TODO - Check if 'serviceWorker' is supported in the current browser
-  if('ServiceWorker' in navigator){
+  if('serviceWorker' in navigator){
     window.addEventListener('load', async function(event){
       try {
         const registration = await navigator.serviceWorker.register("/sw.js", {
